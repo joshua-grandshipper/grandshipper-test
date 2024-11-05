@@ -2,7 +2,7 @@ name: Deploy Main repository
 on:
   push:
     branches:
-      - aws-cicd
+      - ready/test
 
 jobs:
   deploy:

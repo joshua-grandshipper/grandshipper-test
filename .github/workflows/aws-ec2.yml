@@ -5,7 +5,7 @@ on:
       - ready/test
 
 jobs:
-  deploy:
+  integration:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,13 +21,11 @@ jobs:
         REMOTE_USER: ${{ secrets.VPS_USER }}
         TARGET: "/grandshipper"
 
-  buildAndPush:
+  deployment:
     runs-on: ubuntu-latest
-    needs: deploy
+    needs: integration
     
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
 
     - name: Print
       run: echo 'Hello world'

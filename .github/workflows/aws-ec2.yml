@@ -29,7 +29,9 @@ jobs:
           ls -al
         
         SCRIPT_AFTER: |
-          sudo mkdir -p .env/
+          sudo mkdir .env
+          sudo mkdir -p .test-directory
           whoami
           ls -al
           # echo $RSYNC_STDOUT
+          echo "this is SCRIPT_AFTER"

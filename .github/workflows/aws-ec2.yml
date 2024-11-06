@@ -21,18 +21,16 @@ jobs:
         REMOTE_USER: ${{ secrets.VPS_USER }}
         TARGET: "/grandshipper"
         SCRIPT_BEFORE_REQUIRED: true
+        SCRIPT_AFTER_REQUIRED: true
         
         SCRIPT_BEFORE: |
           sudo mkdir -p /grandshipper
           sudo chmod -R 777 /grandshipper
           ls -al
           cat .env.example
-          sad
         
         SCRIPT_AFTER: |
           sudo mkdir .env
-          whoami
           ls -al
           # echo $RSYNC_STDOUT
-          echo "this is SCRIPT_AFTER"
           cat .env.example

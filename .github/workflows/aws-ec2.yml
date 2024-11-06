@@ -27,11 +27,13 @@ jobs:
           sudo chmod -R 777 /grandshipper
           whoami
           ls -al
+          cat .env.example
           sad
         
         SCRIPT_AFTER: |
           sudo mkdir .env
           whoami
           ls -al
-          echo $RSYNC_STDOUT
+          # echo $RSYNC_STDOUT
           echo "this is SCRIPT_AFTER"
+          cat .env.example

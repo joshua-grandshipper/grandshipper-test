@@ -27,7 +27,6 @@ jobs:
           sudo mkdir -p /grandshipper
           sudo chmod -R 777 /grandshipper
           ls -al
-          cat .env.example
         
         SCRIPT_AFTER: |
           sudo mkdir .env

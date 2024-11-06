@@ -20,7 +20,7 @@ jobs:
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
         TARGET: "/grandshipper"
-        SCRIPT_AFTER_REQUIRED: true
+        SCRIPT_AFTER_REQUIRED: false
         
         SCRIPT_BEFORE: |
           sudo mkdir -p /grandshipper

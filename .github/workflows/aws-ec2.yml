@@ -22,6 +22,7 @@ jobs:
         TARGET: "/grandshipper"
         SCRIPT_BEFORE: |
           sudo mkdir -p /grandshipper
+          sudo chmod -R 777 /grandshipper
           whoami
           ls -al
         

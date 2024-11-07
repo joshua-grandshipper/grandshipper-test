@@ -19,17 +19,26 @@ jobs:
         SOURCE: "."
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: "/grandshipper/api-batch"
+        TARGET: "/grandshipper"
         SCRIPT_BEFORE_REQUIRED: true
         SCRIPT_AFTER_REQUIRED: true
         
-        SCRIPT_BEFORE: |
-          sudo mkdir -p /grandshipper
-          sudo chmod -R 777 /grandshipper
-          ls -al
+        # ECR Login
+        SCRIPT_BEFORE: aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
         
         SCRIPT_AFTER: |
+          echo $RSYNC_STDOUT
           cd /grandshipper
-          sudo mkdir -p .env
           ls -al
-          # echo $RSYNC_STDOUT
+
+
+          
+
+          
+
+          
+          
+
+          
+
+          

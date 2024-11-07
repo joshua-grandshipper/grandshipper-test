@@ -32,4 +32,3 @@ jobs:
           sudo mkdir -p .env
           ls -al
           # echo $RSYNC_STDOUT
-          cat .env.example

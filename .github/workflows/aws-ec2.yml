@@ -28,8 +28,14 @@ jobs:
         
         SCRIPT_AFTER: |
           echo $RSYNC_STDOUT
-          cd /grandshipper
           ls -al
+          cd /grandshipper
+
+          # Build and push
+          docker build -t grandshipper-test:local .
+          docker tag grandshipper-test:local 024848460115.dkr.ecr.us-east-1.amazonaws.com/grandshipper-test:local
+          docker push 024848460115.dkr.ecr.us-east-1.amazonaws.com/grandshipper-test:local
+
 
 
           

@@ -29,6 +29,7 @@ jobs:
           ls -al
         
         SCRIPT_AFTER: |
+          cd /grandshipper
           sudo mkdir -p .env
           ls -al
           # echo $RSYNC_STDOUT

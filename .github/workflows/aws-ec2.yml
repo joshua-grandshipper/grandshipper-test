@@ -19,7 +19,7 @@ jobs:
         SOURCE: "."
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: "/grandshipper"
+        TARGET: "/grandshipper/api-batch"
         SCRIPT_BEFORE_REQUIRED: true
         SCRIPT_AFTER_REQUIRED: true
         

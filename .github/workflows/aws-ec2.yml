@@ -28,13 +28,13 @@ jobs:
         
         SCRIPT_AFTER: |
           echo $RSYNC_STDOUT
-          ls -al
           cd /grandshipper
+          ls -al
 
           # Build and push
-          docker build -t grandshipper-test:local .
-          docker tag grandshipper-test:local 024848460115.dkr.ecr.us-east-1.amazonaws.com/grandshipper-test:local
-          docker push 024848460115.dkr.ecr.us-east-1.amazonaws.com/grandshipper-test:local
+          sudo docker build -t grandshipper-test:local .
+          sudo docker tag grandshipper-test:local 024848460115.dkr.ecr.us-east-1.amazonaws.com/grandshipper-test:local
+          sudo docker push 024848460115.dkr.ecr.us-east-1.amazonaws.com/grandshipper-test:local
 
 
 
